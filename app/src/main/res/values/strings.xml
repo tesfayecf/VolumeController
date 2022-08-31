@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">VolumeController</string>
+    <string name="title">VOLUME CONTROLLER</string>
+    <string name="upButtonText">UP</string>
+    <string name="downButtonText">DOWN</string>
+    <string name="startButtonText">START</string>
+    <string name="stopButtonText">STOP</string>
+    <string name="startedStateText">Recording!</string>
+    <string name="stoppedStateText">Start recording!</string>
+    <string name="defaultAvg">-</string>
+    <string name="defaultRaw">-</string>
+    <string name="defaultOpt">60</string>
+    <string name="OptUpDescription">Increase the optimal volume by one</string>
+    <string name="OptDownDescription">Decrease the optimal volume by one</string>
+
+    <string name="settingsTitleText">Settings</string>
+    <string name="SettingsDescription">Button to open the bottom sheet settings fragment</string>
+    <string name="saveButtonText">SAVE</string>
+    <string name="intervalText">INTERVAL:</string>
+    <string name="defaultInterval">50</string>
+    <string name="frequencyText">FREQUENCY:</string>
+    <string name="defaultFrequency">2</string>
+    <string name="rangeText">RANGE:</string>
+    <string name="defaultRange">5</string>
+    <string name="customRangeText">Custom Range</string>
+    <string name="topRangeText">TOP</string>
+    <string name="defaultTopRange">5</string>
+    <string name="bottomRangeText">BOTTOM</string>
+    <string name="defaultBottomRange">5</string>
+</resources>

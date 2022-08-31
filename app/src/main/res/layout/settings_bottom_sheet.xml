@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    tools:context=".SettingsSheet">
+
+    <TextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/grey_200"
+        android:gravity="start"
+        android:paddingStart="30dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="30dp"
+        android:text="@string/settingsTitleText"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="82dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/saveButtonText"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="@+id/settingsTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/intervalTitle"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="76dp"
+        android:gravity="center_vertical"
+        android:text="@string/intervalText"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/intervalValue"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="92dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/defaultInterval"
+        android:autofillHints="50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/freqTitle"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/frequencyText"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intervalTitle" />
+
+    <EditText
+        android:id="@+id/freqValue"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="92dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:autofillHints="@string/defaultFrequency"
+        android:hint="@string/defaultFrequency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intervalValue" />
+
+    <TextView
+        android:id="@+id/rangeTitle"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/rangeText"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freqTitle" />
+
+    <EditText
+        android:id="@+id/rangeValue"
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="92dp"
+        android:ems="10"
+        android:inputType="number"
+        android:autofillHints="@string/defaultRange"
+        android:hint="@string/defaultRange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/freqValue" />
+
+    <CheckBox
+        android:id="@+id/customRangeCheckBox"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/customRangeText"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/topRangeValue"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="252dp"
+        android:textSize="13sp"
+        android:gravity="bottom"
+        android:inputType="number"
+        android:autofillHints="@string/defaultTopRange"
+        android:hint="@string/defaultTopRange"
+        app:layout_constraintStart_toEndOf="@+id/customRangeCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topRangeTitle"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:text="@string/topRangeText"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/customRangeCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/topRangeValue" />
+
+    <EditText
+        android:id="@+id/bottomRangeValue"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="252dp"
+        android:textSize="13sp"
+        android:gravity="bottom"
+        android:inputType="number"
+        android:autofillHints="@string/defaultBottomRange"
+        android:hint="@string/defaultBottomRange"
+        app:layout_constraintStart_toEndOf="@+id/topRangeValue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bottomRangeTitle"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:text="@string/bottomRangeText"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/topRangeValue"
+        app:layout_constraintTop_toTopOf="@+id/bottomRangeValue" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
